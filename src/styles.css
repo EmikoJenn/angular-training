@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  animation-duration: 300ms;
+  -o-animation-duration: 300ms;
+  -moz-animation-duration: 300ms;
+  -webkit-animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}

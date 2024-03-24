@@ -1,0 +1,34 @@
+@import "../../../assets/variables.scss";
+
+header {
+  background-color: $mainColor;
+  color: white;
+  padding-top: 1rem;
+
+  &:hover {
+    background-color: $mainColor;
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+.page-link {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+
+  & button {
+    background-color: #4781ff;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.cart-icon {
+  margin: 0 !important;
+}
