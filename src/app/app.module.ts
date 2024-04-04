@@ -2,12 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
+import { HeaderModule } from './shared/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HomeModule, BrowserAnimationsModule],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HeaderModule,
+    FooterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
