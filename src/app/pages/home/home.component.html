@@ -1,1 +1,17 @@
-<p>{{ catalog }}</p>
+<section class="movie-section">
+  <ng-container *ngIf="catalog.length">
+    <article
+      *ngFor="let movie of catalog"
+      class="movie-card"
+    >
+      <div (click)="addToCart(movie.id)" class="card">
+        <img src="{{'assets/images/' + movie.image}}" />
+        <h4>{{movie.title}}</h4>
+        <p>{{movie.summary}}</p>
+      </div>
+      <h4>Add to cart</h4>
+      <div class="overlay"></div>
+      <img src="{{'assets/images/' + movie.image}}" />
+    </article>
+  </ng-container>
+</section>

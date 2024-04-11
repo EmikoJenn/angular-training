@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
+import { MoviesType } from 'src/mock/data';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,15 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  // catalog: any[] = [];
-  catalog: string = '';
+  catalog: MoviesType = [];
 
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {
-    this.catalog = JSON.stringify(this.movieService.getCatalog());
-    console.log(this.catalog);
+    this.catalog = this.movieService.getCatalog();
+  }
+
+  addToCart(id: number) {
+
   }
 }
