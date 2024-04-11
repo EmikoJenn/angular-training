@@ -1,0 +1,16 @@
+<section class="food-section">
+  <ng-container *ngIf="catalog.length">
+    <article
+      *ngFor="let food of catalog"
+      class="food-card"
+    >
+      <div (click)="addToCart(food.id)" class="card">
+        <img src="{{'assets/images/' + food.image}}" />
+        <h4>{{food.title}}</h4>
+      </div>
+      <h4>Add to cart</h4>
+      <div class="overlay"></div>
+      <img src="{{'assets/images/' + food.image}}" />
+    </article>
+  </ng-container>
+</section>

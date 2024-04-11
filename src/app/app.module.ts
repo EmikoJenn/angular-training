@@ -9,6 +9,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './pages/home/home.module';
 import { SideBarModule } from './shared/side-bar/side-bar.module';
+import { FoodModule } from './pages/food/food.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { SideBarModule } from './shared/side-bar/side-bar.module';
     HeaderModule,
     SideBarModule,
     HomeModule,
+    FoodModule,
     FooterModule,
     AppRoutingModule,
   ],

@@ -1,0 +1,110 @@
+.food-section {
+  display: flex;
+  padding: 4rem;
+  gap: 4rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.food-card {
+  width: 40rem;
+  aspect-ratio: 9/14;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+
+  & > .card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 2rem;
+    flex-grow: 1;
+    align-self: flex-end;
+    z-index: 3;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+
+    & > img {
+      width: 8rem;
+      aspect-ratio: 9/14;
+    }
+
+    & > h4 {
+      display: inline;
+      font-size: 4rem;
+      max-height: 9rem;
+      line-height: 4rem;
+    }
+
+    & > p {
+      display: inline;
+      text-align: justify;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      height: 4rem;
+      white-space: no-wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:hover > .card {
+    opacity: 0;
+  }
+
+  & > h4 {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 3rem;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+  }
+
+  &:hover > h4 {
+    opacity: 1;
+  }
+
+  & > .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &:hover > .overlay {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  & > img  {
+    width: 100%;
+    height: 100%;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover > img {
+    transform: scale(1.2);
+  }
+}

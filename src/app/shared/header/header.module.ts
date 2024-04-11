@@ -4,10 +4,11 @@ import { HeaderComponent } from './header.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [CommonModule, MatGridListModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatGridListModule, MatButtonModule, MatIconModule],
   exports: [HeaderComponent],
 })
 export class HeaderModule {}

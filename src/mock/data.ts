@@ -71,4 +71,32 @@ export const MOVIES = [
   },
 ];
 
+export const FOOD = [
+  {
+    id: 1,
+    title: 'Burguer',
+    image: 'burguer.jpg',
+    price: 9
+  },
+  {
+    id: 2,
+    title: 'Popcorn',
+    image: 'cinema-background-with-popcorn_752237-20385.avif',
+    price: 12
+  },
+  {
+    id: 3,
+    title: 'Combo',
+    image: 'taza-con-palomitas-refrescos-y-entradas-de-cine-sobre-fondo-blanco-tw8gtf.jpg',
+    price: 15
+  },
+  {
+    id: 4,
+    title: 'Hotdog',
+    image: 'l-intro-1672875625.jpg',
+    price: 6
+  },
+];
+
 export type MoviesType = typeof MOVIES;
+export type FOODType = typeof FOOD;

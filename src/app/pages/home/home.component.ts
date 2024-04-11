@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   addToCart(id: number) {
-    this.movieCart.addToCart(id)
+    this.movieCart.addMovieToCart(id)
   }
 }
