@@ -9,7 +9,7 @@
         <h4>{{food.title}}</h4>
       </div>
       <h4>Add to cart</h4>
-      <div class="overlay"></div>
+      <div (click)="addToCart(food.id)" class="overlay"></div>
       <img src="{{'assets/images/' + food.image}}" />
     </article>
   </ng-container>

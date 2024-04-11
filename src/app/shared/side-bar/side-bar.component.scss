@@ -1,0 +1,51 @@
+@import "../../../assets/variables.scss";
+
+.cart {
+  display: flex;
+  width: calc(100% - 8rem);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 25px;
+  background-color: $mainColor;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  & h4 {
+    font-size: 1.5rem;
+  }
+
+  & select {
+    color: white;
+    background-color: inherit;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 2rem;
+    padding: .5rem;
+
+    & > option {
+      color: brown;
+    }
+  }
+
+  & > button {
+    width: 100%;
+    padding: 1rem;
+    color: $mainColor;
+    background-color: white;
+    border-radius: 25px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+article > div {
+  border-bottom: solid white 2px;
+}

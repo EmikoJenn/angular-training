@@ -10,7 +10,7 @@
         <p>{{movie.summary}}</p>
       </div>
       <h4>Add to cart</h4>
-      <div class="overlay"></div>
+      <div (click)="addToCart(movie.id)" class="overlay"></div>
       <img src="{{'assets/images/' + movie.image}}" />
     </article>
   </ng-container>

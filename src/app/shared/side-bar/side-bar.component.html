@@ -1,1 +1,21 @@
-<p>side-bar works!</p>
+<div class="cart">
+  <ng-container *ngIf="cart.length">
+    <article *ngFor="let group of cart">
+      <div *ngFor="let item of group.getValue();index as i">
+        <h4>{{item.title}}</h4>
+        <p>amount: {{item.amount}}</p>
+        <p>total: {{money === 'USD' ? (item.total | currency: 'USD') : money === 'EUR' ? (item.total | currency: 'EUR') : (item.total | currency: 'USD') }}</p>
+        <hr *ngIf="i < group.getValue().length - 1" />
+      </div>
+    </article>
+  </ng-container>
+  <label for="change">
+    Currency
+    <select [(ngModel)]="money" name="change" id="change">
+      <option value="USD" selected="selected">Dollar</option>
+      <option value="EUR">Euro</option>
+      <option value="CADUSD">Canadian Dollar</option>
+    </select>
+  </label>
+  <button type="button">Purchase</button>
+<div>
