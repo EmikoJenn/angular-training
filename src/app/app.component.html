@@ -1,7 +1,14 @@
 <div class="wrapper">
   <app-header></app-header>
-  <main>
-    <router-outlet></router-outlet>
+  <section class="body">
+    <main>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+      <aside>
+        <app-side-bar></app-side-bar>
+      </aside>
+    </main>
     <app-footer></app-footer>
-  </main>
+  </section>
 </div>

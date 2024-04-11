@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './pages/home/home.module';
+import { SideBarModule } from './shared/side-bar/side-bar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { HomeModule } from './pages/home/home.module';
     BrowserModule,
     BrowserAnimationsModule,
     HeaderModule,
+    SideBarModule,
     HomeModule,
     FooterModule,
     AppRoutingModule,
